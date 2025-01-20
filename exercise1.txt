@@ -1,0 +1,8 @@
+git init recap_exercises
+cd recap_exercises
+git remote add origin git@github.com:MeryemAkdenizBIT/recap_exercises.git
+git branch -M main
+nano exercise1.txt
+git add exercise1.txt
+git commit -m "Answer for the first exercise"
+git push -u origin main
