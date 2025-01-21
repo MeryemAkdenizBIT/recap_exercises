@@ -1,12 +1,28 @@
-DB(staffNO, dentistName, patientNo, patientName, appointment, surgeryNO)
-
-UNF:
+DB(*staffNO*, dentistName, patientNo, patientName, *apptDate*, *apptTime*, surgeryNo)
+# choose primary key
+- staffNo --> dentistName
+- patientNo --> patientName
+- apptDate, apptTime --> surgeryNo
+- staffNo, apptDate, apptTime --> patientNo
+with the last 3 as primary key, you can extract all info from the table
 
 1NF:
+# dependencies on primary key
+patientName is dependend on patientNo, which is not a primary key
+New table: patient(*patientNo*, patientName)
+other(*staffNo*, dentistName, patientNo, *apptDate*, *apptTime*, surgeryNo)
 
 2NF:
+# 1NF+no partial dependencies
+surgeryNo is dependent on apptDate AND apptTime
+New table: surgery(*apptDate*, *apptTime*, surgeryNo)
+patient((*patientNo*, patientName)
+other(*staffNo*, dentistName, patientNo, *apptDate*, *apptTime*)
 
 3NF:
+# 2NF+no transitive dependencies
 
 BCNF:
+# 3NF and determinant = candidate
 
+zie exercise2.txt in trial_exam
