@@ -1,0 +1,12 @@
+DB(staffNO, dentistName, patientNo, patientName, appointment, surgeryNO)
+
+UNF:
+
+1NF:
+
+2NF:
+
+3NF:
+
+BCNF:
+
